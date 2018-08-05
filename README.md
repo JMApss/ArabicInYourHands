@@ -1,5 +1,4 @@
 # ArabicInYourHands
-Первый проект на Гитхабе
 ![ScreenShot 1](https://raw.githubusercontent.com/JMApss/ArabicInYourHands/master/screenshots/5_1.png)
 ![ScreenShot 2](https://raw.githubusercontent.com/JMApss/ArabicInYourHands/master/screenshots/5_2.png)
 ![ScreenShot 3](https://raw.githubusercontent.com/JMApss/ArabicInYourHands/master/screenshots/5_3.png)
