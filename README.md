@@ -1,3 +1,3 @@
 # ArabicInYourHands
 Первый проект на Гитхабе
-![ScreenShot](https://raw.github.com/JMApps/ArabicInYourHands/screenshot/5_1.png)
+![ScreenShot](https://github.com/JMApss/ArabicInYourHands/tree/master/screenshots)
