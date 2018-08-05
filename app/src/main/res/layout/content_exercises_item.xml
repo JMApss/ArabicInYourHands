@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_content_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginTop="1dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_title_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_one"
+            android:gravity="start"
+            android:textSize="22sp"
+            tools:text="Пример:" />
+
+        <TextView
+            android:id="@+id/tv_title_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_two"
+            android:gravity="start"
+            android:padding="9dp"
+            android:textSize="27sp"
+            tools:text="خالد:" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_exercises_one"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/tv_question_one_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="9dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/font_two"
+                    android:padding="9dp"
+                    android:textSize="27sp"
+                    tools:ignore="NestedWeights"
+                    tools:text="Ответ" />
+            </LinearLayout>
+
+            <ToggleButton
+                android:id="@+id/tb_arrow_question_one"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="9dp"
+                android:background="@drawable/arrow_state"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_exercises_two"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/tv_answer_two_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="9dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/font_two"
+                    android:padding="9dp"
+                    android:textSize="27sp"
+                    tools:ignore="NestedWeights"
+                    tools:text="Ответ" />
+            </LinearLayout>
+
+            <ToggleButton
+                android:id="@+id/tb_arrow_answer_two"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="9dp"
+                android:background="@drawable/arrow_state"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_exercises_three"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/tv_question_three_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="9dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/font_two"
+                    android:padding="9dp"
+                    android:textSize="27sp"
+                    tools:ignore="NestedWeights"
+                    tools:text="Ответ" />
+            </LinearLayout>
+
+            <ToggleButton
+                android:id="@+id/tb_arrow_question_three"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="9dp"
+                android:background="@drawable/arrow_state"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_exercises_four"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/tv_answer_four_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="9dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/font_two"
+                    android:padding="9dp"
+                    android:textSize="27sp"
+                    tools:ignore="NestedWeights"
+                    tools:text="Ответ" />
+            </LinearLayout>
+
+            <ToggleButton
+                android:id="@+id/tb_arrow_answer_four"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="9dp"
+                android:background="@drawable/arrow_state"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_exercises_five"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/tv_question_five_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="9dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/font_two"
+                    android:padding="9dp"
+                    android:textSize="27sp"
+                    tools:ignore="NestedWeights"
+                    tools:text="Ответ" />
+            </LinearLayout>
+
+            <ToggleButton
+                android:id="@+id/tb_arrow_question_five"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="9dp"
+                android:background="@drawable/arrow_state"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_exercises_six"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/tv_answer_six_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="9dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/font_two"
+                    android:padding="9dp"
+                    android:textSize="27sp"
+                    tools:ignore="NestedWeights"
+                    tools:text="Ответ" />
+            </LinearLayout>
+
+            <ToggleButton
+                android:id="@+id/tb_arrow_answer_six"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="9dp"
+                android:background="@drawable/arrow_state"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

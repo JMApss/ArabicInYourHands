@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_settings_black"
+            android:title="@string/title_menu_settings" />
+    </group>
+
+    <item android:title="@string/title_menu_extra">
+        <menu>
+            <item
+                android:id="@+id/nav_list_apps"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_list_apps_black"
+                android:title="@string/title_menu_list_apps" />
+            <item
+                android:id="@+id/nav_about_app"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_about_app"
+                android:title="@string/title_menu_about_app" />
+            <item
+                android:id="@+id/nav_about_us"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_about_us_black"
+                android:title="@string/title_menu_about_us" />
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@drawable/ic_menu_rate_black"
+                android:title="@string/title_menu_rate" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share_black"
+                android:title="@string/title_menu_share" />
+        </menu>
+    </item>
+
+</menu>

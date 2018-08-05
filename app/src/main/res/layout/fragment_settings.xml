@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_gravity="fill_horizontal"
+        android:background="@color/colorPrimaryDark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_settings_accent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/action_settings"
+            android:textColor="@color/colorAccent"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp">
+
+        <Button
+            android:id="@+id/btn_arabic_text_size_minus"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/btn_minus_state" />
+
+        <TextView
+            android:id="@+id/tv_greeting_arabic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/greeting_ar" />
+
+        <Button
+            android:id="@+id/btn_arabic_text_size_plus"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/btn_plus_state" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/colorSilver" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp">
+
+        <Button
+            android:id="@+id/btn_russian_text_size_minus"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/btn_minus_state" />
+
+        <TextView
+            android:id="@+id/tv_greeting_russian"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/greeting_ru" />
+
+        <Button
+            android:id="@+id/btn_russian_text_size_plus"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/btn_plus_state" />
+    </LinearLayout>
+</LinearLayout>
