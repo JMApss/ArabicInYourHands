@@ -162,7 +162,7 @@ public class MainChaptersActivity extends AppCompatActivity implements
 
         Intent shareLink = new Intent(Intent.ACTION_SEND);
         shareLink.setType("text/plain");
-        shareLink.putExtra(Intent.EXTRA_TEXT, "Серия приложений для мусульман:\n" +
+        shareLink.putExtra(Intent.EXTRA_TEXT, "Серия андроид-приложений для мусульман:\n" +
                 "Арабский в твоих руках. Том 1\n" + strAppLink);
         startActivity(shareLink);
     }
