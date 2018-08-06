@@ -2,7 +2,6 @@ package jmapps.arabicinyourhands.Models;
 
 import jmapps.arabicinyourhands.R;
 
-@SuppressWarnings("CanBeFinal")
 public class ModelAboutApp {
 
     private final int pictureApp;
@@ -10,9 +9,9 @@ public class ModelAboutApp {
 
     public static ModelAboutApp[] aboutAppContent = {
             new ModelAboutApp(R.drawable.ic_svg_code, "В приложении более 3 тысяч строк кода"),
-            new ModelAboutApp(R.drawable.ic_svg_database, "1885 пунктов в базе данных"),
-            new ModelAboutApp(R.drawable.ic_svg_mp3, "2403 нарезки мр3 файлов"),
-            new ModelAboutApp(R.drawable.ic_svg_coffee, "Неизвестное количество испитых чашек кофе"),
+            new ModelAboutApp(R.drawable.ic_svg_database, "1884 пункта в базе данных"),
+            new ModelAboutApp(R.drawable.ic_svg_mp3, "2404 аудиофайла"),
+            new ModelAboutApp(R.drawable.ic_svg_coffee, "Неизвестное количество выпитых чашек кофе"),
             new ModelAboutApp(R.drawable.ic_svg_layers, "Все иконки взяты с сайта www.flaticon.com"),
             new ModelAboutApp(R.drawable.ic_svg_translation, "Идея и текстовая версия взяты с сайта www.ar-ru.ru/arabiya")
     };
