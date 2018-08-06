@@ -40,7 +40,6 @@ public class MainChaptersActivity extends AppCompatActivity implements
 
     public static SharedPreferences mPreferences;
     public static SharedPreferences.Editor mEditor;
-
     public static SQLiteDatabase sqLiteDatabase;
 
     private DrawerLayout drawer;

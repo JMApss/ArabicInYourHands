@@ -40,12 +40,14 @@ public class AdapterMainChapters extends RecyclerView.Adapter<HolderMainChapters
     @Override
     public void onBindViewHolder(@NonNull final HolderMainChapters holder,
                                  @SuppressLint("RecyclerView") final int position) {
+        final int numberChapter = mModelMainChapters.get(position).getNumberMainChapter();
         final int pathIconName = mModelMainChapters.get(position).getIconMainChapter();
         final int pathIconNameWhite = mModelMainChapters.get(position).getIconMainChapterWhite();
         final String strTitleName = mModelMainChapters.get(position).getTitleMainChapter();
         final String strSubTitleName = mModelMainChapters.get(position).getSubTitleMainChapter();
         final String strSetContentNumber = mModelMainChapters.get(position).getSetContentMainNumber();
 
+        holder.tvNumberMainChapter.setText(String.valueOf(numberChapter));
         holder.iconMainChapter.setBackgroundResource(pathIconName);
         holder.titleMainChapter.setText(strTitleName);
         holder.subTitleMainChapter.setText(Html.fromHtml("<b>" + strSubTitleName + "</b>"));
@@ -59,9 +61,11 @@ public class AdapterMainChapters extends RecyclerView.Adapter<HolderMainChapters
         });
     }
 
-    private void openChapterLessonActivity(HolderMainChapters holder, int forContentExercises,
+    private void openChapterLessonActivity(HolderMainChapters holder,
+                                           int forContentExercises,
                                            String forContentChaptersLessons,
-            String titleChapterLessons, int iconChapterLesson) {
+                                           String titleChapterLessons,
+                                           int iconChapterLesson) {
         Intent openChapterActivity = new Intent(holder.itemView.getContext(), ChaptersLessonsActivity.class);
         openChapterActivity.putExtra(keyForContentExercises, forContentExercises);
         openChapterActivity.putExtra(keyForContentChaptersLessons, forContentChaptersLessons);

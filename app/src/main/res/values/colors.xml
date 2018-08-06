@@ -10,5 +10,6 @@
 
     <color name="colorBlack">#000000</color>
     <color name="colorWhite">#FFFFFF</color>
-    <color name="colorSilver">#e7e7e7</color>
+    <color name="colorSilver">#919191</color>
+    <color name="colorLightPrimary">#20790087</color>
 </resources>

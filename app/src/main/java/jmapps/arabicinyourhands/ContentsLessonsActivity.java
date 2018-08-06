@@ -136,7 +136,7 @@ public class ContentsLessonsActivity extends AppCompatActivity implements
         }
     }
 
-    public void playOnly(String nameAudio) {
+    public void playOnly(ModelContentsLessons modelContentsLessons) {
         if (mediaPlayer != null) {
             mediaPlayer.release();
             mediaPlayer = null;
@@ -146,7 +146,7 @@ public class ContentsLessonsActivity extends AppCompatActivity implements
             tbPlayAllAudio.setChecked(false);
         }
 
-        int resID = getResources().getIdentifier(nameAudio,
+        int resID = getResources().getIdentifier(modelContentsLessons.getLessonsNameAudio(),
                 "raw", "jmapps.arabicinyourhands");
 
         mediaPlayer = MediaPlayer.create(this, resID);
@@ -166,7 +166,8 @@ public class ContentsLessonsActivity extends AppCompatActivity implements
                 } else {
                     tbPlayAllAudio.setChecked(false);
                     currentIndex = 0;
-                    adapterContentsLessons.setItemSelected(-1);
+                    adapterContentsLessons.setItemBackground(currentIndex - 1);
+                    adapterContentsLessons.notifyDataSetChanged();
                 }
             }
         });
@@ -179,7 +180,8 @@ public class ContentsLessonsActivity extends AppCompatActivity implements
         }
 
         rvLessonContent.smoothScrollToPosition(currentIndex);
-        adapterContentsLessons.setItemSelected(currentIndex);
+        adapterContentsLessons.setItemBackground(currentIndex);
+        adapterContentsLessons.notifyDataSetChanged();
 
         int resID = getResources().getIdentifier(
                 lessonsContent.get(currentIndex).getLessonsNameAudio(),

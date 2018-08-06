@@ -41,6 +41,7 @@ public class AdapterContentsLessons extends RecyclerView.Adapter<HolderContentsL
         return new HolderContentsLessons(itemView);
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public void onBindViewHolder(@NonNull final HolderContentsLessons holder, @SuppressLint("RecyclerView") final int position) {
         final String strContentArabic = mContentInChapters.get(position).getLessonsContentArabic();
@@ -50,24 +51,23 @@ public class AdapterContentsLessons extends RecyclerView.Adapter<HolderContentsL
         holder.tvLessonsContentArabic.setText(Html.fromHtml(strContentArabic));
         holder.tvLessonsContentRussian.setText(Html.fromHtml(strContentRussian));
 
+        holder.cvContentLesson.setTag(mContentInChapters.get(position));
         holder.cvContentLesson.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ModelContentsLessons modelContentsLessons = (ModelContentsLessons) view.getTag();
-                mContentActivity.playOnly(modelContentsLessons.getLessonsNameAudio());
+                mContentActivity.playOnly(modelContentsLessons);
                 notifyDataSetChanged();
                 currentPosition = position;
             }
         });
 
-        // устанавливаем значение цвета для айтема
         holder.cvContentLesson.setBackgroundColor(
-                (position == currentPosition) ? Color.LTGRAY : Color.WHITE);
+                (position == currentPosition) ? 0x20790087 : 0xFFFFFFFF);
 
         holder.cvContentLesson.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                // Кнопка КОПИРОВАТЬ
                 ClipboardManager clipboard = (ClipboardManager) view.getContext()
                         .getSystemService(Context.CLIPBOARD_SERVICE);
                 ClipData clip = ClipData.newPlainText("",
@@ -83,12 +83,8 @@ public class AdapterContentsLessons extends RecyclerView.Adapter<HolderContentsL
         });
     }
 
-    // метод, устанавливающий цвет на айтем
-    public void setItemSelected(int position) {
-        int tmp = currentPosition;
+    public void setItemBackground(int position) {
         currentPosition = position;
-        if (tmp != -1) notifyItemChanged(tmp); // восстанавливаем цвет ранее выделенного
-        if (position != -1) notifyItemChanged(position); // выделяем новый
     }
 
     @Override
