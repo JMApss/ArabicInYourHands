@@ -6,8 +6,8 @@ android {
         applicationId "jmapps.arabicinyourhands"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 2
-        versionName "Release 1.0.2"
+        versionCode 3
+        versionName "Release 1.1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

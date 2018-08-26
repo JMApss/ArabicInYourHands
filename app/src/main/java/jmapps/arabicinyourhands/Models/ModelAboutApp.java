@@ -5,9 +5,9 @@ import jmapps.arabicinyourhands.R;
 public class ModelAboutApp {
 
     private final int pictureApp;
-    private String nameApp;
+    private final String nameApp;
 
-    public static ModelAboutApp[] aboutAppContent = {
+    public static final ModelAboutApp[] aboutAppContent = {
             new ModelAboutApp(R.drawable.ic_svg_code, "В приложении более 3 тысяч строк кода"),
             new ModelAboutApp(R.drawable.ic_svg_database, "1884 пункта в базе данных"),
             new ModelAboutApp(R.drawable.ic_svg_mp3, "2404 аудиофайла"),
