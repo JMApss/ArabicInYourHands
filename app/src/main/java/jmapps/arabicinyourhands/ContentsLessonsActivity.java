@@ -34,7 +34,7 @@ public class ContentsLessonsActivity extends AppCompatActivity implements
     private AdapterContentsLessons adapterContentsLessons;
     private List<ModelContentsLessons> lessonsContent;
     private ToggleButton tbPlayAllAudio;
-    private int currentIndex;
+    private int currentIndex = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -155,7 +155,6 @@ public class ContentsLessonsActivity extends AppCompatActivity implements
 
     private void playAllAudios() {
         play();
-
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {

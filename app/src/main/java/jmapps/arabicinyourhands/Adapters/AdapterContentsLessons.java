@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
-import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
@@ -23,13 +22,13 @@ import jmapps.arabicinyourhands.ViewHolders.HolderContentsLessons;
 public class AdapterContentsLessons extends RecyclerView.Adapter<HolderContentsLessons> {
 
     private final List<ModelContentsLessons> mContentInChapters;
-    private final ContentsLessonsActivity mContentActivity;
-    private int currentPosition = -1;
+    private final ContentsLessonsActivity mContentsLessonsActivity;
+    private int currentHighlightedPosition = -1;
 
     public AdapterContentsLessons(List<ModelContentsLessons> contentInChapters,
-                                  ContentsLessonsActivity contentActivity) {
+                                  ContentsLessonsActivity contentsLessonsActivity) {
         this.mContentInChapters = contentInChapters;
-        this.mContentActivity = contentActivity;
+        this.mContentsLessonsActivity = contentsLessonsActivity;
     }
 
     @NonNull
@@ -46,7 +45,6 @@ public class AdapterContentsLessons extends RecyclerView.Adapter<HolderContentsL
     public void onBindViewHolder(@NonNull final HolderContentsLessons holder, @SuppressLint("RecyclerView") final int position) {
         final String strContentArabic = mContentInChapters.get(position).getLessonsContentArabic();
         final String strContentRussian = mContentInChapters.get(position).getLessonsContentRussian();
-        //final String strLessonAudioFileName = mContentInChapters.get(position).getLessonsNameAudio();
 
         holder.tvLessonsContentArabic.setText(Html.fromHtml(strContentArabic));
         holder.tvLessonsContentRussian.setText(Html.fromHtml(strContentRussian));
@@ -56,14 +54,14 @@ public class AdapterContentsLessons extends RecyclerView.Adapter<HolderContentsL
             @Override
             public void onClick(View view) {
                 ModelContentsLessons modelContentsLessons = (ModelContentsLessons) view.getTag();
-                mContentActivity.playOnly(modelContentsLessons);
+                mContentsLessonsActivity.playOnly(modelContentsLessons);
                 notifyDataSetChanged();
-                currentPosition = position;
+                currentHighlightedPosition = position;
             }
         });
 
         holder.cvContentLesson.setBackgroundColor(
-                (position == currentPosition) ? 0x20790087 : 0xFFFFFFFF);
+                (position == currentHighlightedPosition) ? 0x20790087 : 0xFFFFFFFF);
 
         holder.cvContentLesson.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -83,8 +81,8 @@ public class AdapterContentsLessons extends RecyclerView.Adapter<HolderContentsL
         });
     }
 
-    public void setItemBackground(int position) {
-        currentPosition = position;
+    public void setItemBackground(int currentHighlightedPosition) {
+        this.currentHighlightedPosition = currentHighlightedPosition;
     }
 
     @Override

@@ -68,13 +68,13 @@ public class ChaptersLessonsActivity extends AppCompatActivity {
         tvLessonChaptersTitle.setText(forTitleChaptersLessons);
         imLessonsChapterIcon.setBackgroundResource(forIconChaptersLessons);
 
-        boolean isAgain = mPreferences.getBoolean("targetView", true);
+        boolean isAgain = mPreferences.getBoolean("target_view", true);
 
         if (isAgain) {
             targetTap();
         }
 
-        mEditor.putBoolean("targetView", false).apply();
+        mEditor.putBoolean("target_view", false).apply();
     }
 
     @Override
@@ -112,5 +112,4 @@ public class ChaptersLessonsActivity extends AppCompatActivity {
 
         handler.postDelayed(r, 100);
     }
-
 }

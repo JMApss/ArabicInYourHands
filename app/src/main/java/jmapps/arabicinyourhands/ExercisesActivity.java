@@ -11,9 +11,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.getkeepsafe.taptargetview.TapTarget;
-import com.getkeepsafe.taptargetview.TapTargetView;
-
 import java.util.List;
 
 import jmapps.arabicinyourhands.Adapters.AdapterExercises;
@@ -60,7 +57,6 @@ public class ExercisesActivity extends AppCompatActivity {
             mediaPlayer.release();
             mediaPlayer = null;
         }
-
 
         boolean isAgain = mPreferences.getBoolean("isAllowExercises", true);
 
@@ -126,6 +122,5 @@ public class ExercisesActivity extends AppCompatActivity {
                 });
 
         instructionDialog.show();
-
     }
 }

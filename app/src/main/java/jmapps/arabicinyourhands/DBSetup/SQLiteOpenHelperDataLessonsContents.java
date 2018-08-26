@@ -25,7 +25,7 @@ public class SQLiteOpenHelperDataLessonsContents extends SQLiteOpenHelper {
     private static final String TableOfNames = "CREATE TABLE " + TableName +
             "(" + "_id" + " " + "INTEGER PRIMARY KEY AUTOINCREMENT, "
             + ContentArabic + " TEXT, " + ContentRussian + " TEXT, "
-            +  NameAudio + " TEXT)";
+            + NameAudio + " TEXT)";
 
     private static final String[] mColumnsContent = {ContentArabic, ContentRussian, NameAudio};
 
